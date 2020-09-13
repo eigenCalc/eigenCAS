@@ -1,27 +1,28 @@
 #include <stack>
 #include <vector>
+#include "giac/gen.h"
 
-class CASObject;
+using giac::gen; // gen is a generic giac cas object.
 
 class Stack
 {
-    virtual void push(CASObject*) = 0;
-    virtual CASObject* pop() = 0;
+    virtual void push(gen*) = 0;
+    virtual gen* pop() = 0;
     virtual void drop() = 0;
 
-    virtual CASObject* get() = 0;
-    virtual CASObject* get(size_t) = 0;
+    virtual gen* get() = 0;
+    virtual gen* get(size_t) = 0;
 };
 
 class LocalStack: public Stack
 {
-    virtual void push(CASObject*) override;
-    virtual CASObject* pop() override;
+    virtual void push(gen*) override;
+    virtual gen* pop() override;
     virtual void drop() override;
 
-    virtual CASObject* get() override;
-    virtual CASObject* get(size_t) override;
+    virtual gen* get() override;
+    virtual gen* get(size_t) override;
 
-    std::vector<CASObject*> data_;
+    std::vector<gen*> data_;
 
 };

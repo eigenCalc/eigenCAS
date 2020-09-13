@@ -1,5 +1,5 @@
 all: main.cpp stack.cpp stack.hpp
-	clang++ -Wall main.cpp stack.cpp -o stack.bin
+	g++ -Wall main.cpp stack.cpp -o stack.bin
 
 	
 clean:
