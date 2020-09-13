@@ -1,5 +1,5 @@
-all: main.cpp stack.cpp stack.hpp
-	g++ -Wall main.cpp stack.cpp -o stack.bin
+all: main.cpp stack.cpp stack.hpp giac/*.* 
+	g++ -Wall main.cpp stack.cpp giac/*.cpp -o stack.bin 
 
 	
 clean:

@@ -27,3 +27,8 @@ gen* LocalStack::get(size_t index)
 {
     return data_[data_.size() - index];
 }
+
+context* LocalStack::ct()
+{
+    return &ct_;
+}
